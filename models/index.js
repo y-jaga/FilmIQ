@@ -21,7 +21,7 @@ sequelize = new Sequelize(
     host: config.host,
     dialect: config.dialect,
     port: config.port,
-    logging: env === "test" ? false : true,
+    logging: false,
   },
   config
 );

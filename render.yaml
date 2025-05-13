@@ -4,7 +4,7 @@ services:
     env: node
     branch: main
     buildCommand: npm install
-    startCommand: npm start
+    startCommand: npm run test && npm start
     autoDeploy: true
     envVars:
       - key: DB_HOST
