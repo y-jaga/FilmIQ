@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: film-iq-backend
+    env: node
+    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: DB_HOST
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: TMDB_USERNAME
+        sync: false
+      - key: TMDB_PASSWORD
+        sync: false
+      - key: TMDB_API_KEY
+        sync: false
+      - key: TMDB_BASE_URL
+        sync: false
+      - key: PORT
+        sync: false
