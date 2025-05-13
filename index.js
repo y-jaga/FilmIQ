@@ -3,16 +3,19 @@ const cors = require("cors");
 const { sequelize } = require("./models");
 const {
   searchMovie,
-  createCuratedList,
-  updateCuratedList,
-  saveMovieToWatchList,
-  saveMovieToWishList,
-  saveMovieToCuratedList,
   addReviewAndRatingToMovies,
   searchByGenreAndActor,
   sortByRatingOrReleaseYear,
   getTop5Movies,
 } = require("./controllers/movieController");
+
+const {
+  createCuratedList,
+  updateCuratedList,
+  saveMovieToWatchList,
+  saveMovieToWishList,
+  saveMovieToCuratedList,
+} = require("./controllers/listController");
 
 const app = express();
 app.use(cors());
